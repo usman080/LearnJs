@@ -1,11 +1,57 @@
-<html>
-<p>Hey Zuher , Ramanand , Rohit and Onkar</p>
 <script>
-var i;
-for(i=2;i<100;i++)
+var i, j;
+var a = new Array(3);
+var b = new Array(3);
+var c = new Array(3);
+
+for(i=0;i<a.length; i++)
 {
-	console.log("\n" +i);
-     i++;
+	a[i] = new Array(3) ;
 }
+
+for(i=0;i<b.length; i++)
+{
+	b[i] = new Array(3) ;
+}
+
+for(i=0;i<c.length; i++)
+{
+	c[i] = new Array(3) ;
+}
+
+for(i=0;i<a.length; i++)
+{
+	for(j=0;j<a.length; j++)
+	{
+		a[i][j] = parseInt(prompt("Enter the A["+i+"]["+j+"]" ), 10);
+	}
+}
+for(i=0;i<b.length; i++)
+{
+	for(j=0;j<b.length; j++)
+	{
+		b[i][j] = parseInt(prompt("Enter the B["+i+"]["+j+"]" ), 10);
+	}
+}
+
+for(i=0;i<a.length; i++)
+{
+	for(j=0;j<a.length; j++)
+	{
+		sum = 0;
+		for(k=0;k<a.length; k++)
+		{
+			c[i][j] = sum + a[i][k]*b[i][k] ;
+		}
+	}
+}
+for(i=0;i<c.length; i++)
+{
+	for(j=0;j<c.length; j++)
+	{
+		console.log(c[i][j]);
+	}
+}
+
+
 </script>
-</html>
