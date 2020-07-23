@@ -1,57 +1,42 @@
 <script>
-var i, j;
+
 var a = new Array(3);
-var b = new Array(3);
-var c = new Array(3);
+var transpose = new Array(3);
+var i, j;
 
+for(i=0; i<a.length; i++)
+{
+a[i] = new Array(3);
+}
+
+for(i=0;i<transpose.length; i++)
+{
+transpose[i] = new Array(3);
+}
+console.log("Enter the Array");
+for(i=0;i<a.length;i++)
+{
+for(j=0;j<a.length;j++)
+{
+a[i][j]= parseInt(prompt("Enter the A["+i+"]["+j+"]"),10);
+console.log(a[i][j]);
+}
+}
+
+for(i=0;i<a.length;i++)
+{
+for(j=0;j<a.length;j++)
+{
+transpose[j][i] = a[i][j] ;
+}
+}
+
+console.log("Transpose of Array:");
 for(i=0;i<a.length; i++)
 {
-	a[i] = new Array(3) ;
-}
-
-for(i=0;i<b.length; i++)
+for(j=0;j<a.length;j++)
 {
-	b[i] = new Array(3) ;
+console.log(transpose[i][j]);
 }
-
-for(i=0;i<c.length; i++)
-{
-	c[i] = new Array(3) ;
 }
-
-for(i=0;i<a.length; i++)
-{
-	for(j=0;j<a.length; j++)
-	{
-		a[i][j] = parseInt(prompt("Enter the A["+i+"]["+j+"]" ), 10);
-	}
-}
-for(i=0;i<b.length; i++)
-{
-	for(j=0;j<b.length; j++)
-	{
-		b[i][j] = parseInt(prompt("Enter the B["+i+"]["+j+"]" ), 10);
-	}
-}
-
-for(i=0;i<a.length; i++)
-{
-	for(j=0;j<a.length; j++)
-	{
-		sum = 0;
-		for(k=0;k<a.length; k++)
-		{
-			c[i][j] = sum + a[i][k]*b[i][k] ;
-		}
-	}
-}
-for(i=0;i<c.length; i++)
-{
-	for(j=0;j<c.length; j++)
-	{
-		console.log(c[i][j]);
-	}
-}
-
-
 </script>
