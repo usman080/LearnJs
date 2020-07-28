@@ -1,7 +1,6 @@
 <html>
   
   <body>
-    <h1 style="color:Blue"> After Entering array Press<font color="red"> Ctrl + shift + I</font>to see the output </h1>
  <script>
 
 var a = new Array(3);
@@ -17,14 +16,15 @@ for(i=0;i<transpose.length; i++)
 {
 transpose[i] = new Array(3);
 }
-console.log("Enter the Array");
+document.write("Array");
 for(i=0;i<a.length;i++)
 {
 for(j=0;j<a.length;j++)
 {
 a[i][j]= parseInt(prompt("Enter the A["+i+"]["+j+"]"),10);
-console.log(a[i][j]);
+document.write(a[i][j] + " ");
 }
+  document.write("<br>");
 }
 
 for(i=0;i<a.length;i++)
@@ -35,13 +35,14 @@ transpose[j][i] = a[i][j] ;
 }
 }
 
-console.log("Transpose of Array:");
+ document.write("Transpose of Array:");
 for(i=0;i<a.length; i++)
 {
 for(j=0;j<a.length;j++)
 {
-console.log(transpose[i][j]);
+ document.write(transpose[i][j] + " ");
 }
+  document.write("<br>");
 }
 </script>
   </body>
